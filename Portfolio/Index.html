@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Livio OSOUF</title>
+    <link rel="stylesheet" href="CSS/StyleAccueil.css">
+    <link rel="icon" href="Images/Logo/Dev.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+
+    <div class="navbar">
+        <div class="column1 title-column">
+            <h1>OSOUF Livio</h1>
+            <h2>Développeur Informatique</h2>
+        </div>
+        <div class="column2 nav-column">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#Accueil" class="active">Accueil</a></li>
+                    <li><a href="#Profil">Profil</a></li>
+                    <li><a href="#Projet">Projets</a></li>
+                    <li><a href="#BTSSIO">BTS SIO</a></li>
+                    <li><a href="#SituationProfessionnelle">Expériences Professionnelles</a></li>
+                    <li><a href="#Veilletechnologique">Veille technologique</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="container fade-in">
+        <section id="Accueil" class="section">
+            <div class="content">
+                <h1>OSOUF Livio</h1>
+                <h2>Etudiant en BTS SIO SLAM</h2>
+                <a href="#Profil" class="button">Démarrer</a>
+            </div>  
+        </section>
+
+
+        <section id="Profil" class="section">
+            <div class="columns-container">
+                <div class="column left-column">
+                    <h2>Profil</h2>
+                    <h3>Qui suis-je ?</h3>
+                    <p>Je suis un étudiant en BTS et apprenti en développement informatique, ayant toujours été passionné d'informatique et de développement et j'ai travaillé avec des langages différents comme :
+                    </p>
+                    <ul>    
+                        <li>C#</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Php</li>
+                        <li>Sql</li>
+                        <li>Python</li>
+                    </ul>
+                    <p>J'ai aussi d'autres passions comme :</p>
+                    <ul>    
+                        <li>Le sport</li>
+                        <li>Les jeux vidéo</li>
+
+                    </ul>
+                </div>
+                <div class="column right-column">
+                    <img src="Images/Logo/User.png" alt="Logo" class="logo" style="height: 70%;width: 70%;">
+                </div>
+            </div>
+
+
+            <div class="columns-container mobile-reverse">
+                <div class="column right-column">
+                    <img src="Images/Logo/LogoLamartine.jpg" alt="Logo" class="logo">
+                </div>
+                <div class="column left-column">
+                    <h2>Mon parcours scolaire</h2>
+                    <br><br>
+                    <div class="timeline">
+                        <div class="event">
+                            <div class="event-date">2025</div>
+                            <div class="event-content">
+                                <h3>En Préparation - Brevet de technicien supérieur</h3>
+                                <p>Obtention d'un brevet de technicien supérieur en service informatique aux organisations avec l'option Solutions Logicielles et Applications Métiers - Lycée Lamartine</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">2023</div>
+                            <div class="event-content">
+                                <h3>Baccalauréat</h3>
+                                <p>Obtention du baccalauréat général avec les spécialités NSI, Mathématiques et Physique-Chimie - Lycée René Cassin</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">2020</div>
+                            <div class="event-content">
+                                <h3>Brevet des collèges</h3>
+                                <p>Obtention brevet des collèges - Collège Roger Poulnard</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <a href="Document/CvLivioOsouf.pdf" target="_blank" class="button">Voir mon CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="Projet" class="section">
+            <div class="columns-container">
+                <div class="column left-column">
+                    <h2>Projets</h2>
+                    <br><br>
+                    <div class="projects">
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Création de site web</h3>
+                                <h4>Développement Web</h4>
+                                <p>Développement d'un site web pour une association</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>Visual studio code</li>
+                                    </ul>  
+                                    <p><i>association-apres.fr</i></p>
+                                    <a href="https://association-apres.fr/" target="_blank" class="button">Voir le site</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/Html.png" alt="Projet 5" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Création de site web</h3>
+                                <h4>Développement Web</h4>
+                                <p>Maquettage et Création de mon Portfolio</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>Figma</li>
+                                        <li>Visual studio code</li>
+                                    </ul> 
+                                    <p><i>osouf-livio.fr</i></p> 
+                                </div>
+                            </div>
+                            <img src="Images/Logo/Html.png" alt="Projet 5" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Gustav Desktop</h3>
+                                <h4>.Net Maui</h4>
+                                <p>Projet de gestion des appels.</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>SQL Server</li>
+                                        <li>Visual Studio</li>
+                                        <li>API <i>(Déjà existante)</i></li>
+                                        <li>GitHub</li>
+                                    </ul>  
+                                    <p>GustavDesktop est une application de bureau ayant pour but de simplifier les prises d'informations au téléphone.</p>
+                                    <p><i>Application développer pour l'entreprise IDConseils pendant mon apprentissage.</i></p>
+                                    <a href="Document/CompteRenduGustavDesktop.pdf" target="_blank" class="button">Voir le compte rendu</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/DotNet.png" alt="Projet 4" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Maquettage</h3>
+                                <h4>Figma</h4>
+                                <p>Création d'un design pour une futur application interne à l'entreprise.</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>Figma</li>
+                                        <li>Canva <i>(Pour les design de fond)</i></li>
+                                    </ul>      
+                                    <p><i>Pour l'entreprise IDConseils pendant mon apprentissage.</i></p>                              
+                                </div>
+                            </div>
+                            <img src="Images/Logo/Figma.png" alt="Projet 3" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir Plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Gustav Mobile</h3>
+                                <h4>.Net Maui</h4>
+                                <p>Adaptation en mobile d'un application web.</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>SQL Server</li>
+                                        <li>Visual Studio</li>
+                                        <li>API <i>(Déjà existante)</i></li>
+                                        <li>GitHub</li>
+                                    </ul>
+                                    <p>GustavMobile est une adaption en application Android d'une application web déjà existante permettant de gérer les interventions de l'entreprise mais aussi les employés en général.</p>
+                                    <p><i>Application développer pour l'entreprise IDConseils pendant mon apprentissage.</i></p>
+                                    <a href="Document/CompteRenduGustavMobile.pdf" target="_blank" class="button">Voir le compte rendu</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/DotNet.png" alt="Projet 2" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Montage PC</h3>
+                                <h4>Instalation</h4>
+                                <p>Assemblage et instalation d'un pc.</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Actions effectuées</h4>
+                                    <ul>
+                                        <li>Assemblage des composants</li>
+                                        <li>Instalation d'un windows</li>
+                                    </ul>  
+                                    <p><i>Assemblage et instalation d'un pc pour mon usage personel.</i></p>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/PC.png" alt="Projet 1" class="project-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="column right-column">
+                    <img src="Images/Logo/Dev.png" alt="Logo" class="logo">
+                </div>
+            </div>
+        </section>
+        
+        
+            
+
+        <section id="BTSSIO" class="section">
+            <div class="columns-container mobile-reverse">
+                <div class="column right-column">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/CSharp.png" alt="C#" class="logo">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/Html.png" alt="Html" class="logo">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/Css.png" alt="Css" class="logo">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/Php.png" alt="Php" class="logo">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/Sql.png" alt="Sql" class="logo">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="Images/Logo/Python.png" alt="Python" class="logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="column left-column">
+                    <h2>BTS SIO</h2>
+                    <h3>Brevet de Technicien Supérieur en Services Informatiques aux Organisations - Solutions Logicielles et Applications Métiers
+                    </h3>
+                    <p>Le BTS SIO en option SLAM est une formation en deux ans pour apprendre le développement Logiciels à l'aide de langages comme :</p>
+                    <ul>    
+                        <li>C#</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Php</li>
+                        <li>Sql</li>
+                        <li>Python</li>
+                    </ul>
+                    <p>Cette formation professionnalisante peut être effectuée en apprentissage et a pour but soit de permettre une insertion professionnelle directe, soit de poursuivre des études en licence, en école d'ingénieurs ou en Master.</p>
+                    <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers" target="_blank" class="button">Plus d'informations</a>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section id="SituationProfessionnelle" class="section">
+            <div class="columns-container">
+                <div class="column left-column">
+                    <h2>Expériences Professionnelles</h2>
+                    <br><br>
+                    <div class="timeline">
+                        <div class="event">
+                            <div class="event-date">2025</div>
+                            <div class="event-content">
+                                <h3>Apprentissage</h3>
+                                <p>Apprentissage en développement informatique chez IDConseils durant ma deuxième année de BTS SIO</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">2024</div>
+                            <div class="event-content">
+                                <h3>Apprentissage</h3>
+                                <p>Apprentissage en développement informatique chez IDConseils durant ma première année de BTS SIO</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">2022</div>
+                            <div class="event-content">
+                                <h3>Vendanges</h3>
+                                <p>Vendanges avec les Vignerons des Terres Secretes</p>
+                            </div>
+                            <div class="event-content">
+                                <h3>Vendanges</h3>
+                                <p>Vendanges au domaine Challand à Viré</p>
+                            </div>
+                            <div class="event-content">
+                                <h3>Inventaire</h3>
+                                <p>Inventaire dans l'entreprise Fitech à Châlon sur Sâone</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-date">2021</div>
+                            <div class="event-content">
+                                <h3>Vendanges</h3>
+                                <p>Vendanges au domaine Challand à Viré</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right-column">
+                    <img src="Images/Logo/IdConseils.jpg" alt="Logo" class="logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="Veilletechnologique" class="section">
+            <div class="columns-container mobile-reverse">
+                <div class="column right-column">
+                    <img src="Images/Logo/VeillePasPng.png" alt="Logo" class="logo">
+                </div>
+                <div class="column left-column">
+                    <h2>Veille Technologique</h2>
+                    <h3><i>l'avenir des applications, les application web.</i></h3>
+                    <div class="projects">
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir Plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Huly</h3>
+                                <h4>Un outil tout en un pour votre gestion de projets</h4>
+                                <p>Huly est une plateforme open-source qui rassemble toutes les fonctionnalités de gestion de projet en un seul endroit.</p>
+                                <div class="project-details" style="display: none;">
+                                    <p>Cette application web a pour but de simplifier la gestion des projets de développement et ainsi pouvoir voir les avancements de toute l'équipe "en temps réel".</p>
+                                    <a href="https://korben.info/huly-outil-tout-en-un-productivite-equipe.html" target="_blank" class="button">Voir plus</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/VeillePasPng.png" alt="Projet 1" class="project-image">
+                        </div>
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir Plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Nom Article</h3>
+                                <h4>Sujet de l'article</h4>
+                                <p>Courte description de l'article</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées dans l'article</h4>
+                                    <ul>
+                                        <li>Tech</li>
+                                        <li>Tech</li>
+                                    </ul>
+                                    <p>Reste de la desciption de l'article</p>
+                                    <a href="Error/" target="_blank" class="button">Voir plus</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/VeillePasPng.png" alt="Projet 1" class="project-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Contact" class="section">
+            <form action="PHP/SendMail.php" method="post" onsubmit="return validateForm();">
+                <h2>Me Contacter</h2>
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name"><br><br>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+            
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5"></textarea><br><br>
+            
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </div>   
+
+    <script src="js/validateScript.js"></script>
+
+
+    <script src="js/ToogleProjectDetailsScript.js"></script>
+    <script src="js/LoaderScript.js"></script>
+    <script src="js/ActiveScript.js"></script>
+    <script src="js/scriptBackground.js"></script>
+    <script src="js/AppearScript.js"></script>
+    <script src="js/ScriptAppearSection.js"></script>
+    <script src="js/Scriptcarrousel.js"></script>
+    <script src="js/ToogleBarScript.js"></script>
+</body>
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Naviguer</h3>
+            <ul>
+                <li><a href="#Accueil" class="active">Accueil</a></li>
+                <li><a href="#Profil">Profil</a></li>
+                <li><a href="#Projet">Projets</a></li>
+                <li><a href="#BTSSIO">BTS SIO</a></li>
+                <li><a href="#SituationProfessionnelle">Expériences Professionnelles</a></li>
+                <li><a href="#Veilletechnologique">Veille technologique</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>Adresse: 71 Route de Bagé, Feillens, France</li>
+                <li>Téléphone: +33 7 83 55 97 57</li>
+                <li>Email : livio.sup@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <div class="social-icons">
+                <a href="https://github.com/Losouf" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/livio_osf/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/livio-osouf-a636a2309/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 OSOUF Livio. Tous droits réservés. Site crée par <a href="https://osouf-livio.fr/">OSOUF Livio</a>.</p>
+    </div>
+</footer>
+
+</html>

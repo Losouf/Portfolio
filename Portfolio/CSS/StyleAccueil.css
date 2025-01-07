@@ -1,0 +1,893 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Animation pour le contenu de la page */
+.fade-in {
+    opacity: 0; /* Commence par être transparent */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation de fondu et de translation */
+}
+
+/* Classe active pour faire apparaître le contenu */
+.fade-in-active {
+    opacity: 1; /* Opacité complète */
+}
+
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* S'assure que le loader est toujours au-dessus des autres éléments */
+}
+
+#loader {
+    border: 8px solid #f3f3f3; /* Couleur de fond du spinner */
+    border-top: 8px solid #000; /* Couleur de l'animation */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Assure que le canvas est derrière le contenu */
+}
+
+
+.section{
+    scroll-margin-top: 15vh;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.section-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    height: 15vh; 
+    padding: 0 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône burger (cachée par défaut) */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+/* Menu ouvert */
+.nav-column nav ul.nav-links.show {
+    right: 0;
+}
+
+.column1 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-column {
+    flex-direction: column; /* Empile le titre et le sous-titre verticalement */
+}
+
+.title-column h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Taille réduite pour s'adapter à la hauteur */
+    margin-bottom: 3%; /* Ajoute un espace sous le titre */
+}
+
+.title-column h2 {
+    margin: 0;
+    font-size: 1rem; /* Taille réduite pour s'adapter à la hauteur */
+    color: #666;
+}
+
+.nav-column nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-column nav ul li {
+    margin: 0 10px;
+    align-self: center;
+}
+
+.nav-column nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: color 0.3s, transform 0.3s;}
+
+.nav-column nav ul li a:hover {
+    color: #1ed3ca;
+    transform: scale(1.05);
+}
+
+/* Style pour l'état actif */
+.nav-column nav ul li a.active {
+    color: #1ed3ca;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.container {
+    margin-top: 7.5vh;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Couleur de fond du bloc */
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 10px; /* Coins arrondis */
+    width: 100%; /* Largeur du bloc, ajustable selon les besoins */
+    height: 100vh;
+}
+ 
+h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 7rem;
+}
+
+.button {
+    display: inline-block;  
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff; /* Couleur du texte du bouton */
+    background-color: #000; /* Fond transparent par défaut */
+    border: 2px solid transparent; /* Bordure colorée par défaut */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s; /* Transition fluide pour tous les changements */
+    position: relative;
+    z-index: 2;
+}
+
+.button:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #000; /* Couleur du texte au survol */
+    border: 2px solid #000; /* Bordure colorée au survol */
+}
+
+
+
+
+
+
+
+
+.columns-container {
+    width: 100%;
+    margin: 50px auto 50px auto; /* Centre la section horizontalement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.right-column {
+    width: 40%; /* Chaque colonne prend 40% de la largeur totale */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.left-column {
+    width: 40%; /* Chaque colonne prend 40% de la largeur totale */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligne les éléments à gauche */
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.left-column h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000; /* Crée une ligne de 2px de hauteur en dessous du titre */
+    padding-bottom: 5px; /* Ajoute un peu d'espace entre le texte et la ligne */
+    display: inline-block; /* S'assure que la ligne ne s'étend pas au-delà du texte */
+}
+
+.left-column p {
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.right-column .logo {
+    max-width: 100%; /* Assure que le logo ne dépasse pas la largeur de la colonne */
+    height: auto; /* Maintient les proportions du logo */
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img.logo {
+    width: 100%; /* Adaptation à la largeur de la colonne */
+    height: auto; /* Maintient les proportions */
+}
+
+.fade {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+/*Pour la scroll bar*/
+::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+::-webkit-scrollbar-track {
+    background: transparent; /* Fond de la barre de défilement */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2; /* Couleur de la poignée */
+    border-radius: 10px; /* Rayon de la poignée */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #24242480; /* Couleur de la poignée au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.first-section {
+    height: 20vh; /* Hauteur de la première ligne */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Fond blanc pour la section */
+    padding: 20px;
+    text-align: center;
+}
+
+.first-section h1 {
+    margin: 0;
+    font-size: 4rem;
+    margin-top: 2%;
+}
+
+.first-section h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.first-section p {
+    font-size: 1rem;
+    color: #333;
+    width: 30%;
+}
+
+.second-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet de faire passer les rectangles sur plusieurs lignes si nécessaire */
+    gap: 20px; /* Espace entre les rectangles */
+    padding: 20px;
+    background-color: #fff; /* Fond gris clair pour la section */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.rectangle {
+    width: 30vw; /* 40% de la largeur de la fenêtre */
+    height: 30vh; /* 15% de la hauteur de la fenêtre */
+    display: flex;
+    background-color: #fff; /* Fond blanc pour le rectangle */
+    border: 1px solid #ddd; /* Bordure légère pour les rectangles */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Masquer le débordement */
+}
+
+.rectangle .image-column {
+    width: 60%; /* La colonne d'image prend 50% du rectangle */
+    height: 100%; /* Hauteur complète du rectangle */
+    background-color: #f9f9f9; /* Fond gris clair pour la colonne d'image */
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+}
+
+.rectangle .image-column img {
+    width: 100%; /* L'image prend toute la largeur de la colonne */
+    height: auto; /* Maintient les proportions de l'image */
+}
+
+.rectangle .text-column {
+    width: 50%; /* La colonne de texte prend 50% du rectangle */
+    height: 100%; /* Hauteur complète du rectangle */
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Padding autour du texte */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.rectangle .text-column .text-content {
+    flex: 1; /* Occupe l'espace restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espace entre les éléments de texte */
+}
+
+.rectangle .text-column p {
+    margin: 5px 0; /* Marges autour des paragraphes */
+}
+
+.rectangle .text-column .bottom-images {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Place les petites images en bas de la colonne de texte */
+}
+
+.rectangle .text-column .bottom-images img {
+    width: 10%; /* Chaque image prend 30% de la largeur disponible */
+    height: auto; /* Maintient les proportions des images */
+}
+
+
+
+
+
+
+/*TIMELINE*/
+.timeline {
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border-left: 2px solid #000000;
+}
+
+.event {
+    position: relative;
+    margin: 30px 0;
+    padding-left: 20px;
+
+}
+
+.event-date {
+    position: absolute;
+    left: -70px;
+    top: 0;
+    font-weight: bold;
+    color: #000000;
+}
+
+.event-content {
+
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 5px 0;
+    transition: transform 0.3s, box-shadow 0.3s; /* Durée de l'animation */
+}
+
+.event-content:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
+}
+
+.event-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.event-content p {
+    margin: 5px 0 0;
+}
+
+
+
+
+
+
+/* Styles de base pour la section Contact */
+#Contact {
+    padding: 50px 20px;
+    background-color: #d2d2d2;
+}
+
+/* Centrer le formulaire dans la section */
+#Contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Contact h2 {
+    font-size: 2rem; /* Taille de police plus grande */
+    border-bottom: 2px solid #000; /* Ligne soulignée en bas */
+    padding-bottom: 5px; /* Espace entre le texte et la ligne */
+    margin-bottom: 20px; /* Espace en bas du titre */
+    color: #000; /* Couleur du texte */
+    display: inline-block;
+}
+
+/* Style des labels */
+#Contact label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Style des champs de texte et email */
+#Contact input[type="text"],
+#Contact input[type="email"],
+#Contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Ajouter un focus stylé */
+#Contact input[type="text"]:focus,
+#Contact input[type="email"]:focus,
+#Contact textarea:focus {
+    border-color:  #000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Style du textarea */
+#Contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Style du bouton envoyer */
+#Contact input[type="submit"] {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff; /* Couleur du texte du bouton */
+    background-color: #000; /* Fond transparent par défaut */
+    border: 2px solid transparent; /* Bordure colorée par défaut */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+/* Effet hover sur le bouton */
+#Contact input[type="submit"]:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #000; /* Couleur du texte au survol */
+    border: 2px solid #000; /* Bordure colorée au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styles de base pour le footer */
+footer {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* Container pour organiser les sections du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style des sections du footer */
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    padding : 0 50px;
+}
+
+/* Titre des sections */
+.footer-section h3 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* Liste des liens */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #1ed3ca;
+}
+
+/* Icônes des réseaux sociaux */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1ed3ca;
+}
+
+/* Footer bottom (copyright) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.footer-bottom a{
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover{
+    color: #1ed3ca;
+}
+
+
+
+
+
+
+
+
+
+
+/* Styles pour mobile */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: row;
+        padding: 0 10px;
+    }
+    .column1 {
+        flex: 1;
+    }
+
+    .column2 {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    .nav-column nav ul.nav-links {
+        position: fixed;
+        right: -100%;
+        top: 15vh;
+        height: 70vh;
+        width: 50%;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+    }
+    .nav-column nav ul li {
+        margin: 15px 0;
+    }
+    /* Afficher le menu burger */
+    .burger-menu {
+        display: flex;
+        margin-right: 10vw;
+    }
+
+
+
+    h2 {
+        margin: 0;
+        font-size: 1rem;
+        color: #000;
+    }
+    
+    h1 {
+        margin: 10px 0;
+        font-size: 3.5rem;
+    }
+
+    .button {
+        font-size: 0.75rem;
+    }
+
+    .columns-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-reverse {
+        display: flex;
+        flex-direction: column-reverse; /* Inverse l’ordre des colonnes uniquement si la classe est appliquée */
+    }
+    
+    .left-column,
+    .right-column {
+        width: 70%; /* Chaque colonne prend 100% de la largeur totale */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Aligne le contenu au centre */
+        text-align: center; /* Centre le texte */
+        margin: 20px 0; /* Ajoute un espacement entre les colonnes */
+    }
+    
+    /* Si vous souhaitez garder l'alignement à gauche pour la colonne gauche */
+    .left-column {
+        align-items: flex-start; /* Aligne les éléments à gauche */
+        text-align: left; /* Aligne le texte à gauche */
+    }
+
+    .left-column h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-section {
+        padding : 0 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les cartes */
+    max-width: 600px;
+    margin: auto;
+}
+
+.project-card {
+    position: relative; /* Permet d'utiliser la position absolue pour le superposition */
+    display: flex; /* Flexbox pour aligner le contenu et l'image */
+    background-color: #fff; /* Couleur de fond de la carte */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation */
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.project-card.active {
+    transform: scale(1.05); /* Agrandir légèrement la carte active */
+}
+
+.project-content {
+    flex: 1; /* Prend l'espace restant */
+}
+
+.project-image {
+    width: 20%; /* Largeur de l'image */
+    height: 20%; /* Garder le ratio */
+    margin-left: 20px; /* Espacement entre le texte et l'image */
+    border-radius: 100%;
+}
+
+
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.5em; /* Taille du titre */
+    color: #333;
+}
+
+.project-card h4 {
+    margin: 5px 0; /* Espacement entre le titre et le sous-titre */
+    font-size: 1.2em; /* Taille du sous-titre */
+    color: #666;
+}
+
+.project-card p {
+    margin: 10px 0 0; /* Espacement au-dessus du texte */
+    color: #555;
+}
+
+.project-details {
+    margin-top: 10px;
+    color: #000; /* Couleur du texte des détails */
+    display: none; /* Masqué par défaut */
+}
+
+.project-details h4{
+    border-bottom: 1px solid #333;
+    display: inline-block;
+}
+
+.project-details li{
+    color: #333;
+}
+
+.project-card.active .project-details {
+    display: block; /* Affiche les détails lorsque la carte est active */
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+
+.toggle-text {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
