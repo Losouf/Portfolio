@@ -9,15 +9,13 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Animation pour le contenu de la page */
 .fade-in {
-    opacity: 0; /* Commence par être transparent */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation de fondu et de translation */
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
-/* Classe active pour faire apparaître le contenu */
 .fade-in-active {
-    opacity: 1; /* Opacité complète */
+    opacity: 1;
 }
 
 
@@ -31,16 +29,16 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* S'assure que le loader est toujours au-dessus des autres éléments */
+    z-index: 9999;
 }
 
 #loader {
-    border: 8px solid #f3f3f3; /* Couleur de fond du spinner */
-    border-top: 8px solid #000; /* Couleur de l'animation */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #000; 
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    animation: spin 1.5s linear infinite; /* Animation de rotation */
+    animation: spin 1.5s linear infinite; 
 }
 
 @keyframes spin {
@@ -55,7 +53,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Assure que le canvas est derrière le contenu */
+    z-index: -1; 
 }
 
 
@@ -123,18 +121,18 @@ canvas {
 }
 
 .title-column {
-    flex-direction: column; /* Empile le titre et le sous-titre verticalement */
+    flex-direction: column;
 }
 
 .title-column h1 {
     margin: 0;
-    font-size: 1.5rem; /* Taille réduite pour s'adapter à la hauteur */
-    margin-bottom: 3%; /* Ajoute un espace sous le titre */
+    font-size: 1.5rem; 
+    margin-bottom: 3%;
 }
 
 .title-column h2 {
     margin: 0;
-    font-size: 1rem; /* Taille réduite pour s'adapter à la hauteur */
+    font-size: 1rem; 
     color: #666;
 }
 
@@ -185,7 +183,7 @@ canvas {
     height: auto;
     justify-content: center;
     align-items: center;
-    background-color: transparent; /* Couleur de fond du bloc */
+    background-color: transparent;
 }
 
 .content {
@@ -195,8 +193,8 @@ canvas {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    border-radius: 10px; /* Coins arrondis */
-    width: 100%; /* Largeur du bloc, ajustable selon les besoins */
+    border-radius: 10px; 
+    width: 100%;
     height: 100vh;
 }
  
@@ -215,21 +213,21 @@ h1 {
     display: inline-block;  
     margin-top: 20px;
     text-decoration: none;
-    color: #fff; /* Couleur du texte du bouton */
-    background-color: #000; /* Fond transparent par défaut */
-    border: 2px solid transparent; /* Bordure colorée par défaut */
+    color: #fff;
+    background-color: #000;
+    border: 2px solid transparent;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
-    transition: all 0.3s; /* Transition fluide pour tous les changements */
+    transition: all 0.3s;
     position: relative;
     z-index: 2;
 }
 
 .button:hover {
-    background-color: transparent; /* Fond transparent au survol */
-    color: #000; /* Couleur du texte au survol */
-    border: 2px solid #000; /* Bordure colorée au survol */
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
 }
 
 
@@ -241,7 +239,7 @@ h1 {
 
 .columns-container {
     width: 100%;
-    margin: 50px auto 50px auto; /* Centre la section horizontalement */
+    margin: 50px auto 50px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -249,7 +247,7 @@ h1 {
 }
 
 .right-column {
-    width: 40%; /* Chaque colonne prend 40% de la largeur totale */
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,12 +258,12 @@ h1 {
 }
 
 .left-column {
-    width: 40%; /* Chaque colonne prend 40% de la largeur totale */
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Aligne les éléments à gauche */
-    text-align: left; /* Aligne le texte à gauche */
+    align-items: flex-start;
+    text-align: left;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -273,9 +271,9 @@ h1 {
 .left-column h2 {
     font-size: 3rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #000; /* Crée une ligne de 2px de hauteur en dessous du titre */
-    padding-bottom: 5px; /* Ajoute un peu d'espace entre le texte et la ligne */
-    display: inline-block; /* S'assure que la ligne ne s'étend pas au-delà du texte */
+    border-bottom: 2px solid #000; 
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
 .left-column p {
@@ -285,8 +283,20 @@ h1 {
 }
 
 .right-column .logo {
-    max-width: 100%; /* Assure que le logo ne dépasse pas la largeur de la colonne */
-    height: auto; /* Maintient les proportions du logo */
+    max-width: 100%; 
+    height: auto; 
+}
+
+.document{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all  0.3s;
+}
+
+.document:hover{
+    transform: scale(1.1);
 }
 
 .slideshow-container {
@@ -300,8 +310,8 @@ h1 {
 }
 
 img.logo {
-    width: 100%; /* Adaptation à la largeur de la colonne */
-    height: auto; /* Maintient les proportions */
+    width: 100%; 
+    height: auto; 
 }
 
 .fade {
@@ -328,19 +338,18 @@ img.logo {
 
 
 
-/*Pour la scroll bar*/
 ::-webkit-scrollbar {
-    width: 10px; /* Largeur de la barre de défilement */
+    width: 10px; 
 }
 ::-webkit-scrollbar-track {
-    background: transparent; /* Fond de la barre de défilement */
+    background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #D2D2D2; /* Couleur de la poignée */
-    border-radius: 10px; /* Rayon de la poignée */
+    background-color: #D2D2D2; 
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #24242480; /* Couleur de la poignée au survol */
+    background-color: #24242480;
 }
 
 
@@ -355,12 +364,12 @@ img.logo {
 
 
 .first-section {
-    height: 20vh; /* Hauteur de la première ligne */
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9; /* Fond blanc pour la section */
+    background-color: #f9f9f9; 
     padding: 20px;
     text-align: center;
 }
@@ -385,66 +394,66 @@ img.logo {
 .second-section {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permet de faire passer les rectangles sur plusieurs lignes si nécessaire */
-    gap: 20px; /* Espace entre les rectangles */
+    flex-wrap: wrap; 
+    gap: 20px;
     padding: 20px;
-    background-color: #fff; /* Fond gris clair pour la section */
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
 .rectangle {
-    width: 30vw; /* 40% de la largeur de la fenêtre */
-    height: 30vh; /* 15% de la hauteur de la fenêtre */
+    width: 30vw; 
+    height: 30vh; 
     display: flex;
-    background-color: #fff; /* Fond blanc pour le rectangle */
-    border: 1px solid #ddd; /* Bordure légère pour les rectangles */
-    border-radius: 10px; /* Coins arrondis */
-    overflow: hidden; /* Masquer le débordement */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; 
 }
 
 .rectangle .image-column {
-    width: 60%; /* La colonne d'image prend 50% du rectangle */
-    height: 100%; /* Hauteur complète du rectangle */
-    background-color: #f9f9f9; /* Fond gris clair pour la colonne d'image */
+    width: 60%; 
+    height: 100%; 
+    background-color: #f9f9f9; 
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center; /* Centre l'image verticalement */
+    justify-content: center;
+    align-items: center;
 }
 
 .rectangle .image-column img {
-    width: 100%; /* L'image prend toute la largeur de la colonne */
-    height: auto; /* Maintient les proportions de l'image */
+    width: 100%; 
+    height: auto;
 }
 
 .rectangle .text-column {
-    width: 50%; /* La colonne de texte prend 50% du rectangle */
-    height: 100%; /* Hauteur complète du rectangle */
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px; /* Padding autour du texte */
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .rectangle .text-column .text-content {
-    flex: 1; /* Occupe l'espace restant */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espace entre les éléments de texte */
+    justify-content: space-between;
 }
 
 .rectangle .text-column p {
-    margin: 5px 0; /* Marges autour des paragraphes */
+    margin: 5px 0;
 }
 
 .rectangle .text-column .bottom-images {
     display: flex;
     gap: 10px;
-    margin-top: auto; /* Place les petites images en bas de la colonne de texte */
+    margin-top: auto;
 }
 
 .rectangle .text-column .bottom-images img {
-    width: 10%; /* Chaque image prend 30% de la largeur disponible */
-    height: auto; /* Maintient les proportions des images */
+    width: 10%; 
+    height: auto; 
 }
 
 
@@ -482,12 +491,12 @@ img.logo {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 15px;
     margin: 5px 0;
-    transition: transform 0.3s, box-shadow 0.3s; /* Durée de l'animation */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .event-content:hover {
-    transform: scale(1.05); /* Agrandissement léger au survol */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .event-content h3 {
@@ -521,11 +530,11 @@ img.logo {
 }
 
 #Contact h2 {
-    font-size: 2rem; /* Taille de police plus grande */
-    border-bottom: 2px solid #000; /* Ligne soulignée en bas */
-    padding-bottom: 5px; /* Espace entre le texte et la ligne */
-    margin-bottom: 20px; /* Espace en bas du titre */
-    color: #000; /* Couleur du texte */
+    font-size: 2rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #000;
     display: inline-block;
 }
 
@@ -570,9 +579,9 @@ img.logo {
 #Contact input[type="submit"] {
     margin-top: 20px;
     text-decoration: none;
-    color: #fff; /* Couleur du texte du bouton */
-    background-color: #000; /* Fond transparent par défaut */
-    border: 2px solid transparent; /* Bordure colorée par défaut */
+    color: #fff;
+    background-color: #000;
+    border: 2px solid transparent;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
@@ -581,9 +590,9 @@ img.logo {
 
 /* Effet hover sur le bouton */
 #Contact input[type="submit"]:hover {
-    background-color: transparent; /* Fond transparent au survol */
-    color: #000; /* Couleur du texte au survol */
-    border: 2px solid #000; /* Bordure colorée au survol */
+    background-color: transparent;
+    color: #000; 
+    border: 2px solid #000;
 }
 
 
@@ -604,7 +613,6 @@ footer {
     color: #333;
 }
 
-/* Container pour organiser les sections du footer */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -612,7 +620,6 @@ footer {
     gap: 20px;
 }
 
-/* Style des sections du footer */
 .footer-section {
     flex: 1;
     min-width: 220px;
@@ -620,14 +627,12 @@ footer {
     padding : 0 50px;
 }
 
-/* Titre des sections */
 .footer-section h3 {
     font-size: 1.2rem;
     color: #000;
     margin-bottom: 10px;
 }
 
-/* Liste des liens */
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -648,7 +653,6 @@ footer {
     color: #1ed3ca;
 }
 
-/* Icônes des réseaux sociaux */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -666,7 +670,6 @@ footer {
     color: #1ed3ca;
 }
 
-/* Footer bottom (copyright) */
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
@@ -750,24 +753,23 @@ footer {
 
     .mobile-reverse {
         display: flex;
-        flex-direction: column-reverse; /* Inverse l’ordre des colonnes uniquement si la classe est appliquée */
+        flex-direction: column-reverse; 
     }
     
     .left-column,
     .right-column {
-        width: 70%; /* Chaque colonne prend 100% de la largeur totale */
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Aligne le contenu au centre */
-        text-align: center; /* Centre le texte */
-        margin: 20px 0; /* Ajoute un espacement entre les colonnes */
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
     }
     
-    /* Si vous souhaitez garder l'alignement à gauche pour la colonne gauche */
     .left-column {
-        align-items: flex-start; /* Aligne les éléments à gauche */
-        text-align: left; /* Aligne le texte à gauche */
+        align-items: flex-start;
+        text-align: left;
     }
 
     .left-column h2 {
@@ -792,39 +794,39 @@ footer {
 .projects {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacement entre les cartes */
+    gap: 20px;
     max-width: 600px;
     margin: auto;
 }
 
 .project-card {
-    position: relative; /* Permet d'utiliser la position absolue pour le superposition */
-    display: flex; /* Flexbox pour aligner le contenu et l'image */
-    background-color: #fff; /* Couleur de fond de la carte */
+    position: relative;
+    display: flex;
+    background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation */
+    transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-card.active {
-    transform: scale(1.05); /* Agrandir légèrement la carte active */
+    transform: scale(1.05);
 }
 
 .project-content {
-    flex: 1; /* Prend l'espace restant */
+    flex: 1;
 }
 
 .project-image {
-    width: 20%; /* Largeur de l'image */
-    height: 20%; /* Garder le ratio */
-    margin-left: 20px; /* Espacement entre le texte et l'image */
+    width: 20%;
+    height: 20%;
+    margin-left: 20px;
     border-radius: 100%;
 }
 
@@ -832,25 +834,25 @@ footer {
 
 .project-card h3 {
     margin: 0;
-    font-size: 1.5em; /* Taille du titre */
+    font-size: 1.5em;
     color: #333;
 }
 
 .project-card h4 {
-    margin: 5px 0; /* Espacement entre le titre et le sous-titre */
-    font-size: 1.2em; /* Taille du sous-titre */
+    margin: 5px 0;
+    font-size: 1.2em;
     color: #666;
 }
 
 .project-card p {
-    margin: 10px 0 0; /* Espacement au-dessus du texte */
+    margin: 10px 0 0;
     color: #555;
 }
 
 .project-details {
     margin-top: 10px;
-    color: #000; /* Couleur du texte des détails */
-    display: none; /* Masqué par défaut */
+    color: #000;
+    display: none;
 }
 
 .project-details h4{
@@ -863,7 +865,7 @@ footer {
 }
 
 .project-card.active .project-details {
-    display: block; /* Affiche les détails lorsque la carte est active */
+    display: block; 
 }
 
 .project-overlay {
