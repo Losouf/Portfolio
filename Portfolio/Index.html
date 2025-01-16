@@ -81,7 +81,7 @@
 
             <div class="columns-container mobile-reverse">
                 <div class="column right-column">
-                    <a href="Document/CvLivioOsouf.pdf" target="_blank"><img src="Document/CvLivioOsouf.png" alt="Logo" class="document"></a>
+                    <a href="Document/CvLivioOsouf.pdf" target="_blank"><img src="Document/CvLivioOsouf.png" alt="CV" class="document"></a>
                 </div>
                 <div class="column left-column">
                     <h2>Mon parcours scolaire</h2>
@@ -122,6 +122,30 @@
                     <h2>Projets</h2>
                     <br><br>
                     <div class="projects">
+                        <div class="project-card" onclick="toggleDetails(this)">
+                            <div class="project-overlay">
+                                <span class="toggle-text">Voir plus</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>Création de site web marchand</h3>
+                                <h4>Développement Web</h4>
+                                <p>Développement d'un site web marchand fictif permettant de simuler une expérience d'achat en ligne complète</p>
+                                <div class="project-details" style="display: none;">
+                                    <h4>Technologies utilisées</h4>
+                                    <ul>
+                                        <li>PHP</li>
+                                        <li>HTML</li>
+                                        <li>Css</li>
+                                        <li>JavaScript</li>
+                                        <li>MySQL</li>
+                                    </ul>  
+                                    <p><i>osouf-livio.fr/Shop/Accueil/</i></p>
+                                    <a href="https://osouf-livio.fr/Shop/Accueil/" target="_blank" class="button">Voir le site</a>
+                                </div>
+                            </div>
+                            <img src="Images/Logo/Php.png" alt="Projet 5" class="project-image">
+                        </div>
+
                         <div class="project-card" onclick="toggleDetails(this)">
                             <div class="project-overlay">
                                 <span class="toggle-text">Voir plus</span>
@@ -256,7 +280,7 @@
         <section id="BTSSIO" class="section">
             <div class="columns-container mobile-reverse">
                 <div class="column right-column">
-                    <div class="slideshow-container">
+                    <div class="slideshow-container slideshow-1">
                         <div class="mySlides fade">
                             <img src="Images/Logo/CSharp.png" alt="C#" class="logo">
                         </div>
@@ -304,15 +328,22 @@
                     <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3" target="_blank" class="button">Voir la formation</a>
                 </div>
                 <div class="column right-column">
-                    <img src="Images/Logo/OpenClassrooms.webp" alt="Logo" class="logo" style="height: 70%;width: 70%;">
+                    <img src="Images/Logo/OpenClassrooms.webp" alt="Logo" class="logoOP" style="height: 70%;width: 70%;">
                 </div>
             </div>
 
 
             <div class="columns-container mobile-reverse">
                 <div class="column right-column">
+                    <div class="slideshow-container slideshow-2">
+                        <div class="mySlides fade">
+                            <a href="Document/Attestation_Pix.png" target="_blank"><img src="Document/Attestation_Pix.png" alt="Pix" class="certif"></a>
+                        </div>
+                        <div class="mySlides fade">
+                            <a href="Document/Attestation_SecNum.png" target="_blank"><img src="Document/Attestation_SecNum.png" alt="SecnumAcademie" class="certif"></a>
+                        </div>
+                    </div>
                     <!--Carrousel avec mes certifications-->
-                    <p><i>Carrousel avec mes certifications</i></p>
                 </div>
                 <div class="column left-column">
                     <h2>Mes certifications</h2>
@@ -320,7 +351,7 @@
                     <p>J'ai obtenu trois certifications importantes :</p>
                     <ul>    
                         <li>Pix</li>
-                        <li>SecnumAcademie</li>
+                        <li>SecNum Academie</li>
                         <li>OpenClassrooms - "Créez votre site web avec HTML5 et CSS3"</li>
                     </ul>
                     <p>Ces certifications ont enrichi ma formation en conception et développement d'application en me fournissant des compétences clés en développement web, en sécurité numérique et en maîtrise des outils numériques. Elles m'ont permis de mieux comprendre les principes de création de sites web, d'assurer leur sécurité et de renforcer mes compétences techniques, me préparant ainsi pour des projets professionnels dans le domaine du développement.</p>
@@ -404,26 +435,6 @@
                             </div>
                             <img src="Images/Logo/VeillePasPng.png" alt="Projet 1" class="project-image">
                         </div>
-                        <div class="project-card" onclick="toggleDetails(this)">
-                            <div class="project-overlay">
-                                <span class="toggle-text">Voir Plus</span>
-                            </div>
-                            <div class="project-content">
-                                <h3>Nom Article</h3>
-                                <h4>Sujet de l'article</h4>
-                                <p>Courte description de l'article</p>
-                                <div class="project-details" style="display: none;">
-                                    <h4>Technologies utilisées dans l'article</h4>
-                                    <ul>
-                                        <li>Tech</li>
-                                        <li>Tech</li>
-                                    </ul>
-                                    <p>Reste de la desciption de l'article</p>
-                                    <a href="Error/" target="_blank" class="button">Voir plus</a>
-                                </div>
-                            </div>
-                            <img src="Images/Logo/VeillePasPng.png" alt="Projet 1" class="project-image">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -448,7 +459,6 @@
     </div>   
 
     <script src="js/validateScript.js"></script>
-
 
     <script src="js/ToogleProjectDetailsScript.js"></script>
     <script src="js/LoaderScript.js"></script>

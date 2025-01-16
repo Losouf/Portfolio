@@ -314,6 +314,18 @@ img.logo {
     height: auto; 
 }
 
+img.certif {
+    height: 40vh;
+    width: auto;
+    transition: all ease 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+img.certif:hover {
+    transform: scale(1.2);
+}
+
 .fade {
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -779,6 +791,13 @@ footer {
     .footer-section {
         padding : 0 0;
     }
+
+
+
+    img.certif {
+        height: 50vw;
+        width: auto;
+    }
 }
 
 
@@ -893,3 +912,57 @@ footer {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+
+
+
+  
+.carrousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .carrousel {
+    overflow: hidden;
+  }
+  
+  .images-container {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .carrousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #333; /* Bordure autour de l'image */
+    border-radius: 10px; /* Coins arrondis */
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
