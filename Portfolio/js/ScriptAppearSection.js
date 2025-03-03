@@ -13,11 +13,12 @@
     function animateOnScroll() {
         const sections = document.querySelectorAll('.section');
         sections.forEach(section => {
-            if (isElementInViewport(section)) {
+            if (isElementInViewport(section) && !section.classList.contains('section-active')) {
                 section.classList.add('section-active');
             }
         });
     }
+    
 
     // Écouter l'événement de défilement
     window.addEventListener('scroll', animateOnScroll);
