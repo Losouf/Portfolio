@@ -4,35 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets</title>
-    <style>
-        .projet {
-            display: none;
-        }
-        .projet.active {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="../CSS/StyleAccueil.css">
+    <link rel="icon" href="../Images/Logo/Dev.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
-
-    <h1>Mes Projets</h1>
-
-    <div class="projet" id="projet1">
-        <h2>Projet 1</h2>
-        <p>Détails du projet 1...</p>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
     </div>
 
-    <div class="projet" id="projet2">
-        <h2>Projet 2</h2>
-        <p>Détails du projet 2...</p>
+    <div class="navbar">
+        <div class="column1 title-column">
+            <h1>OSOUF Livio</h1>
+            <h2>Développeur Informatique</h2>
+        </div>
+        <div class="column2 nav-column">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#Accueil" class="active">Accueil</a></li>
+                    <li><a href="#Profil">Profil</a></li>
+                    <li><a href="#Projet">Projets</a></li>
+                    <li><a href="#BTSSIO">BTS SIO</a></li>
+                    <li><a href="#SituationProfessionnelle">Expériences Professionnelles</a></li>
+                    <li><a href="#Veilletechnologique">Veille technologique</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="container fade-in">
+        <div class="projet" id="projet1">
+            <div class="projet-header">
+                <div class="projet-image">
+                    <img src="../Images/Logo/PC.png" alt="Image PC">
+                </div>
+                <div class="projet-title">
+                    <h2>Montage d'un Ordinateur fixe</h2>
+                    <h3>Montage et Instalation</h3>
+                </div>
+            </div>
+            <div class="projet-body">
+                <p class="description">Assemblage et Instalation d'un ordinateur pour un usage personel et professionnel.</p>
+                <h4>Actions effectuées :</h4>
+                <ul class="technologies">
+                    <li>Assemblage des composants</li>
+                    <li>Instalation d'un Windows 10</li>
+                    <li>Instalation de drivers</li>
+                </ul>
+                <h4>compétences :</h4>
+                <ul class="technologies">
+                    <li>...1</li>
+                    <li>...2</li>
+                    <li>...3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="projet" id="projet2">
+            <div class="projet-header">
+                <div class="projet-image">
+                    <img src="../Images/Logo/DotNet.png" alt="DotNet">
+                </div>
+                <div class="projet-title">
+                    <h2>GustavMobile</h2>
+                    <h3>.Net MAUI</h3>
+                </div>
+            </div>
+            <div class="projet-body">
+                <p class="description">Adaptation d'une application web en mobile.</p>
+                <p class="description">Gustav Mobile est une Adaptation en application Android d'une application déja existante permettant de gérer les interventions
+                    de l'entreprise mais aussi les employés en général.
+                </p>
+                <h4>Technologies utilisées :</h4>
+                <ul class="technologies">
+                    <li>.Net MAUI</li>
+                    <li>Visual Studio</li>
+                    <li>SQL Server</li>
+                    <li>API <i>(Déja existante)</i></li>
+                    <li>GitHub</li>
+                </ul>
+                <h4>compétences :</h4>
+                <ul class="technologies">
+                    <li>...1</li>
+                    <li>...2</li>
+                    <li>...3</li>
+                </ul>
+                <p class="description"><i>Application développée en équipe pour l'entreprise IDConseils pendant mon apprentissage de BTS SIO.</i></p>
+            </div>
+        </div>           
     </div>
 
-    <div class="projet" id="projet3">
-        <h2>Projet 3</h2>
-        <p>Détails du projet 3...</p>
-    </div>
-
+    
     <script src="../js/ScriptDetailsProjets.js"></script>
 
+    <script src="../js/ToogleProjectDetailsScript.js"></script>
+    <script src="../js/LoaderScript.js"></script>
+    <script src="../js/scriptBackground.js"></script>
+    <script src="../js/AppearScript.js"></script>
+    <script src="../js/ScriptAppearSection.js"></script>
+    <script src="../js/ToogleBarScript.js"></script>
 </body>
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Naviguer</h3>
+            <ul>
+                <li><a href="#Accueil" class="active">Accueil</a></li>
+                <li><a href="#Profil">Profil</a></li>
+                <li><a href="#Projet">Projets</a></li>
+                <li><a href="#BTSSIO">BTS SIO</a></li>
+                <li><a href="#SituationProfessionnelle">Expériences Professionnelles</a></li>
+                <li><a href="#Veilletechnologique">Veille technologique</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>Adresse: 71 Route de Bagé, Feillens, France</li>
+                <li>Téléphone: +33 7 83 55 97 57</li>
+                <li>Email : livio.sup@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <div class="social-icons">
+                <a href="https://github.com/Losouf" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/livio_osf/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/livio-osouf-a636a2309/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 OSOUF Livio. Tous droits réservés. Site crée par <a href="https://osouf-livio.fr/">OSOUF Livio</a>.</p>
+    </div>
+</footer>
 </html>
