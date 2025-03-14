@@ -81,3 +81,11 @@ body, html {
     color: #555;
     margin-bottom: 5px;
 }
+
+.projet .img-bonus {
+    display: block; 
+    margin: 20px auto; 
+    width: 80%; 
+    border: gray solid 1px;
+    border-radius: 10px;
+}
