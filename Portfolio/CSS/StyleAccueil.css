@@ -542,87 +542,91 @@ img.certif:hover {
 
 
 
-/* Styles de base pour la section Contact */
+/* Section Contact */
 #Contact {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background-color: #d2d2d2;
-}
-
-/* Centrer le formulaire dans la section */
-#Contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#Contact h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: #000;
-    display: inline-block;
-}
-
-/* Style des labels */
-#Contact label {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Style des champs de texte et email */
-#Contact input[type="text"],
-#Contact input[type="email"],
-#Contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-/* Ajouter un focus stylé */
-#Contact input[type="text"]:focus,
-#Contact input[type="email"]:focus,
-#Contact textarea:focus {
-    border-color:  #000;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Inter', sans-serif;
 }
 
-/* Style du textarea */
+#Contact form {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#Contact h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+#Contact .sous-titre {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#Contact .input-row {
+    display: flex;
+    gap: 20px; 
+}
+
+#Contact .input-row input {
+    flex: 1; 
+}
+
+#Contact input[type="email"],
+#Contact input[type="text"],
+#Contact textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#Contact input:focus,
+#Contact textarea:focus {
+    border-color: #d2d2d2;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
 #Contact textarea {
     resize: vertical;
     min-height: 150px;
 }
 
-/* Style du bouton envoyer */
 #Contact input[type="submit"] {
-    margin-top: 20px;
-    text-decoration: none;
-    color: #fff;
+    width: 100%;
     background-color: #000;
-    border: 2px solid transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: all 0.3s;
+    color: white;
+    border: #000 1px solid;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Effet hover sur le bouton */
 #Contact input[type="submit"]:hover {
-    background-color: transparent;
-    color: #000; 
-    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
 }
+
 
 
 
