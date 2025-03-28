@@ -285,6 +285,14 @@ h1 {
     margin-bottom: 10px;
 }
 
+.left-column p a{
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.left-column p a:hover{
+    color: #a0a0a0;
+}
+
 .right-column .logo {
     max-width: 100%; 
     height: auto; 
