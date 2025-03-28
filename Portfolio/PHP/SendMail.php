@@ -3,6 +3,11 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    if (!empty($_POST['website'])) {
+      exit; //Protection anti bot
+    }
+
     $fields = ['lastname', 'firstname', 'email', 'subject', 'message'];
     $data = [];
 
